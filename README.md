@@ -13,44 +13,13 @@ quoteBook
 ![alt text](https://github.com/DevMountain/quoteBook/blob/master/preview.png?raw=true, "Preview Image")
 
 ## Instructions
-
 ### Set up your Structure
-
 ####
 Set up a basic angular app and a controller.  Test to make sure everything is working.
-
 ####
 The first step whenever you're setting up an Angular App is to set up your foundation then check if your controller is tied to the view as it should be.
-* Create an index.html and a style.css file
-* Create a folder called js
-* In the js folder, create an app.js, dataService.js, and a mainCtrl.js file
-* Link your style.css sheet and your js files to your index.html page
-* In your index.html file create the basic structure of your html
-  - Bootstrap your app with ```ng-app="quoteBook"```.
-  - Bind your controller to your body tag with ```ng-controller="mainCtrl"```.
-* In your app.js file create your angular app. Call it 'quoteBook';
-* In your mainCtrl.js file set up your first controller. Call it 'mainCtrl'.
-
 ####
-__Code__
-
-```javascript
-angular.module('quoteBook', []);
-```
-
-```javascript
-angular.module('quoteBook').controller('mainCtrl', function($scope){
-
-});
-```
-
 ### Test
-
-* In your index.html file before the body tag closes include script tags which link to all your Angular files in the 'js' folder.
-* Now that your app and controller are set up and they're linked in your html page, make a property called 'test' on your $scope object in your controller. Set it equal to any string you choose.
-* Verify that it works with {{test}} in your html page.
-* If you see whatever text you entered into $scope.test in your view, continue to the next step. If not, check your console for any errors.
-
 ### Set up your Angular Service
 ####
 Set up a service that hides an array of data.  The service should then allow you to: get, add, and remove data from that array via exposed functions.
@@ -127,7 +96,6 @@ angular.module("quoteBook").service('dataService', function(){
 ### Add Data from your Service to your Controller and Display it
 ####
 Get the data from your service to display in your view via the controller
-
 ####
 Inject your service in to your controller then add that data to the scope of your controller, then display it in your view
 * Inject your dataService into your mainCtrl
